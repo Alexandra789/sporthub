@@ -18,11 +18,6 @@ function toggleMenu() {
 burgerMenu.addEventListener('click', toggleMenu);
 
 overlay.addEventListener('click', toggleMenu);
-navMenu.addEventListener('click', (e) => {
-    if (e.target.classList.contains('menu__link')) {
-        toggleMenu();
-    }
-});
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && burgerMenu.classList.contains('active')) {
