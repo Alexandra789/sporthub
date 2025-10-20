@@ -1,38 +1,40 @@
 let swiperHeader = null;
 
 function initSwiper() {
+    if (swiperHeader) {
+        swiperHeader.destroy(true, true);
+        swiperHeader = null;
+    }
+
     if (window.innerWidth <= 1023) {
-        if (!swiperHeader) {
-            swiperHeader = new Swiper(".header__slider", {
-                slidesPerView: "auto",
-                grabCursor: "true",
-                spaceBetween: 10,
-                grabCursor: true,
-                freeMode: true,
-                resistance: true,
-                resistanceRatio: 0,
-                breakpoints: {
-                    320: {
-                        slidesPerView: "auto",
-                        spaceBetween: 8
-                    },
-                    768: {
-                        slidesPerView: "auto", 
-                        spaceBetween: 12
-                    }
+        swiperHeader = new Swiper(".header__slider", {
+            slidesPerView: "auto",
+            grabCursor: true,
+            spaceBetween: 10,
+            freeMode: {
+                enabled: true,
+                sticky: false
+            },
+            resistance: true,
+            resistanceRatio: 0.85,
+            watchSlidesProgress: true,
+            touchStartPreventDefault: false,
+            breakpoints: {
+                320: {
+                    slidesPerView: "auto",
+                    spaceBetween: 8
+                },
+                768: {
+                    slidesPerView: "auto", 
+                    spaceBetween: 12
                 }
-            });
-        }
-    } else {
-        if (swiperHeader) {
-            swiperHeader.destroy(true, true);
-            swiperHeader = null;
-        }
+            }
+        });
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    initSwiper();
+    setTimeout(initSwiper, 100);
 });
 
 window.addEventListener('resize', function() {
