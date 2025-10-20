@@ -635,7 +635,8 @@ section:not(section:last-of-type) {
     }
 
     .header {
-        min-height: 250px;
+        height: 250px;
+        min-height: auto;
     }
 }
 
