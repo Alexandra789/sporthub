@@ -110,11 +110,6 @@ a {
     margin: 0 auto;
 }
 
-.latest-section {
-    margin-top: 24px;
-    margin-bottom: 60px;
-}
-
 .news-wrapper {
     display: flex;
     flex-direction: row;
@@ -149,6 +144,11 @@ a {
     margin-top: 40px;
     line-height: 21px;
     margin-bottom: 24px;
+}
+
+section:not(section:last-of-type) {
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .new-preview__img {
@@ -215,11 +215,6 @@ a {
     -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.quotes-section {
-    margin-bottom: 60px;
-    margin-top: 60px;
 }
 
 .quotes-container {
@@ -308,11 +303,6 @@ a {
     line-height: 40px;
 }
 
-.subscription-section {
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
 .subscription-container {
     max-width: 1418px;
     padding: 0 9px;
@@ -323,7 +313,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .subscription__title {
@@ -348,7 +338,7 @@ a {
     width: 100%;
     background-color: #F01B0D;
     padding: 66px 100px;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .social-media__item {
@@ -377,6 +367,7 @@ a {
     background-color: #000000;
     padding: 70px 40px;
     gap: 20px;
+    justify-content: center;
 }
 
 #email {
@@ -518,17 +509,20 @@ a {
     }
 }
 
-@media (max-width: 1340px) {
+@media (max-width: 1400px) {
     .header__wrapper {
         max-width: 574px;
     }
 
     .news-preview {
         max-width: 360px;
+        min-height: auto;
+        min-height: 480px;
     }
 
     .news-wrapper {
         gap: 40px 26px;
+        justify-content: center;
     }
 
     .new-preview__img {
@@ -539,5 +533,40 @@ a {
         font-size: 16px;
         line-height: 20px;
         -webkit-line-clamp: 4;
+    }
+
+    .quotes-container {
+        justify-content: center;
+        gap: 40px 90px;
+    }
+
+    .subscription__form {
+        padding: 44px 12px;
+    }
+
+    .social-media__list {
+        gap: 12px;
+    }
+
+    #email {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .social-media__list {
+        padding: 66px 48px;
+    }
+
+    section:not(section:last-of-type) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .statement-section {
+        padding: 123px 97px 45px 96px;
+    }
+
+    .extreme-section {
+        padding: 114px 47px 44px 147px;
     }
 }
