@@ -6,9 +6,20 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 8px;
     position: relative;
     z-index: 1000;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-menu:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.burger-menu:active {
+    transform: scale(0.95);
 }
 
 .burger-menu__line {
@@ -16,9 +27,14 @@
     height: 1px;
     width: 100%;
     border-radius: 1px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
     background-color: #FFFFFF;
+}
+
+.burger-menu:hover .burger-menu__line {
+    background-color: #ffcccc;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 .burger-menu.active .burger-menu__line:nth-child(1) {

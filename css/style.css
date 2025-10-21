@@ -18,6 +18,25 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo {
+    display: block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.logo img {
+    transition: all 0.3s ease;
+}
+
+.logo:hover img {
+    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3));
 }
 
 .container {
@@ -59,6 +78,33 @@ a {
     letter-spacing: 0.05em;
 }
 
+.menu__link {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+.menu__link:hover {
+    color: #ffcccc;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.menu__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__link:hover::after {
+    width: 100%;
+}
+
 .header__wrapper {
     max-width: 640px;
     width: 100%;
@@ -95,6 +141,39 @@ a {
     gap: 50px;
     padding: 22px 0;
     justify-content: center;
+}
+
+.sports-categories__link {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.sports-categories__link:hover {
+    color: #ffcccc;
+    transform: translateY(-3px) scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.sports-categories__link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sports-categories__link:hover::before {
+    opacity: 1;
 }
 
 .sports-categories__item.swiper-slide {
@@ -144,6 +223,14 @@ a {
 .news-preview {
     max-width: 640px;
     width: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.news-preview:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .news-preview--full-img {
@@ -179,6 +266,13 @@ section:not(section:last-of-type) {
     height: 368px;
     margin-bottom: 20px;
     width: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    object-fit: cover;
+}
+
+.news-preview:hover .new-preview__img {
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.1);
 }
 
 .post-meta {
@@ -199,6 +293,34 @@ section:not(section:last-of-type) {
     color: #000000;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+}
+
+.news-preview__link {
+    display: block;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.news-preview__link:hover {
+    color: inherit;
+}
+
+.news-preview__link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.news-preview__link:hover::before {
+    left: 100%;
 }
 
 .news-preview--full-img .news-preview__link {
@@ -227,6 +349,12 @@ section:not(section:last-of-type) {
     font-weight: 700;
     font-size: 26px;
     line-height: 32px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.news-preview:hover .news-preview__title {
+    color: #F01B0D;
+    transform: translateX(4px);
 }
 
 .news-preview__text {
@@ -382,6 +510,35 @@ section:not(section:last-of-type) {
     outline: none;
     border-radius: 50px;
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.subscription__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.subscription__button:hover {
+    background-color: #d0150a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(240, 27, 13, 0.4);
+}
+
+.subscription__button:hover::before {
+    left: 100%;
+}
+
+.subscription__button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(240, 27, 13, 0.3);
 }
 
 .subscription__form {
@@ -404,6 +561,27 @@ section:not(section:last-of-type) {
     background: inherit;
     border-bottom: 1px solid #FFFFFF4D;
     color: #FFFFFF;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#email:hover {
+    border-bottom-color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#email:focus {
+    border-bottom-color: #F01B0D;
+    background: rgba(240, 27, 13, 0.1);
+    box-shadow: 0 2px 8px rgba(240, 27, 13, 0.2);
+}
+
+#email::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+#email:focus::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #email::placeholder {
@@ -478,6 +656,30 @@ section:not(section:last-of-type) {
     letter-spacing: 0.05px;
     line-height: 19px;
     text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: inline-block;
+}
+
+.footer__link:hover {
+    color: #ffcccc;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.footer__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__link:hover::after {
+    width: 100%;
 }
 
 .footer-ad {
@@ -496,6 +698,30 @@ section:not(section:last-of-type) {
     font-size: 14px;
     line-height: 16px;
     font-weight: 300;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: inline-block;
+}
+
+.footer-ad__link:hover {
+    color: #ffcccc;
+    transform: translateY(-1px);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.footer-ad__link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-ad__link:hover::after {
+    width: 100%;
 }
 
 .footer-social-media {
@@ -509,6 +735,27 @@ section:not(section:last-of-type) {
     flex-direction: row;
     gap: 24px;
     justify-content: center;
+}
+
+.footer-social-media__link {
+    display: block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.footer-social-media__link:hover {
+    transform: scale(1.2) rotate(5deg);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
+}
+
+.footer-social-media__icon {
+    transition: filter 0.3s ease;
+}
+
+.footer-social-media__link:hover .footer-social-media__icon {
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
 }
 
 .footer__info {
@@ -663,18 +910,26 @@ section:not(section:last-of-type) {
     width: 1280px;
     height: 750px;
     position: relative;
-    animation: modalSlideIn 0.3s ease-out;
+    animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 0.3s ease;
+}
+
+.modal__content:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 @keyframes modalSlideIn {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(-50px) scale(0.9);
+        transform: translateY(-80px) scale(0.8) rotateX(15deg);
     }
-
-    to {
+    50% {
+        opacity: 0.8;
+        transform: translateY(-20px) scale(0.95) rotateX(5deg);
+    }
+    100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1) rotateX(0deg);
     }
 }
 
@@ -700,13 +955,18 @@ section:not(section:last-of-type) {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .modal__close:hover {
     background: #f5f5f5;
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal__close:active {
+    transform: scale(0.95) rotate(90deg);
 }
 
 .modal__close-icon {
@@ -746,11 +1006,31 @@ section:not(section:last-of-type) {
     text-decoration: none;
     font-size: 18px;
     line-height: 1.4;
-    transition: color 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: inline-block;
 }
 
 .modal__link:hover {
-    color: #cccccc;
+    color: #ffcccc;
+    transform: translateX(8px);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.modal__link::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffffff);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__link:hover::before {
+    width: 8px;
 }
 
 .modal__column:first-child .modal__link {
@@ -787,11 +1067,29 @@ section:not(section:last-of-type) {
 
 .modal__social-link {
     display: block;
-    transition: transform 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border-radius: 50%;
+    padding: 8px;
 }
 
 .modal__social-link:hover {
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(5deg);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
+}
+
+.modal__social-link:active {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.modal__social-icon {
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+.modal__social-link:hover .modal__social-icon {
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
 }
 
 .modal__social-icon {}
@@ -821,11 +1119,30 @@ section:not(section:last-of-type) {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: inline-block;
 }
 
 .modal__ad-link:hover {
-    color: #cccccc;
+    color: #ffcccc;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.modal__ad-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__ad-link:hover::after {
+    width: 100%;
 }
 
 .modal__subscription {
@@ -856,14 +1173,23 @@ section:not(section:last-of-type) {
     font-size: 16px;
     width: 250px;
     outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__subscription-form input::placeholder {
     color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
 }
 
 .modal__subscription-form input:focus {
-    border-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.modal__subscription-form input:hover {
+    border-color: rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -876,12 +1202,35 @@ section:not(section:last-of-type) {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal__subscription-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(240, 27, 13, 0.1), transparent);
+    transition: left 0.5s ease;
 }
 
 .modal__subscription-button:hover {
-    background-color: #f5f5f5;
-    transform: translateY(-1px);
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal__subscription-button:hover::before {
+    left: 100%;
+}
+
+.modal__subscription-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1300px) {
