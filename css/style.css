@@ -347,7 +347,6 @@ section:not(section:last-of-type) {
 
 .news-preview:hover .news-preview__title {
     color: #F01B0D;
-    transform: translateX(4px);
 }
 
 .news-preview__text {
