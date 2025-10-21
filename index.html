@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/burger-menu.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
@@ -423,95 +424,107 @@
             </div>
         </div>
     </footer>
-    
+
     <div class="modal" id="modal">
         <div class="modal__content">
             <div class="modal__header">
-                <img src="images/logo.svg" alt="logo" class="modal__logo">
+                <img src="images/modal-logo.svg" alt="logo" class="modal__logo">
                 <button class="modal__close" id="modalClose" aria-label="Закрыть модальное окно">
                     <img src="images/cross.svg" alt="close" class="modal__close-icon">
                 </button>
             </div>
             <div class="modal__body">
-                <div class="modal__columns">
-                    <div class="modal__column">
-                        <ul class="modal__list">
-                            <li><a href="#" class="modal__link">REVIEW</a></li>
-                            <li><a href="#" class="modal__link">ЭКСТРИМ</a></li>
-                            <li><a href="#" class="modal__link">ЛЕГЕНДЫ</a></li>
-                            <li><a href="#" class="modal__link">ЗОЖ И ТУРИЗМ</a></li>
-                            <li><a href="#" class="modal__link">ПОЗІРК</a></li>
-                            <li><a href="#" class="modal__link">ТРЕШ</a></li>
+                <div class="modal__wrapper">
+                    <div class="modal__columns">
+                        <div class="modal__column">
+                            <ul class="modal__list">
+                                <li><a href="#" class="modal__link">REVIEW</a></li>
+                                <li><a href="#" class="modal__link">ЭКСТРИМ</a></li>
+                                <li><a href="#" class="modal__link">ЛЕГЕНДЫ</a></li>
+                                <li><a href="#" class="modal__link">ЗОЖ И ТУРИЗМ</a></li>
+                                <li><a href="#" class="modal__link">ПОЗІРК</a></li>
+                                <li><a href="#" class="modal__link">ТРЕШ</a></li>
+                            </ul>
+                        </div>
+                        <div class="modal__column">
+                            <ul class="modal__list">
+                                <li><a href="#" class="modal__link">Футбол</a></li>
+                                <li><a href="#" class="modal__link">Хоккей</a></li>
+                                <li><a href="#" class="modal__link">Биатлон</a></li>
+                                <li><a href="#" class="modal__link">Теннис</a></li>
+                                <li><a href="#" class="modal__link">Гандбол</a></li>
+                                <li><a href="#" class="modal__link">Баскетбол</a></li>
+                                <li><a href="#" class="modal__link">Бокс</a></li>
+                                <li><a href="#" class="modal__link">Легкая атлетика</a></li>
+                                <li><a href="#" class="modal__link">Другое</a></li>
+                            </ul>
+                        </div>
+                        <div class="modal__column">
+                            <ul class="modal__list">
+                                <li><a href="#" class="modal__link">О ПРОЕКТЕ</a></li>
+                                <li><a href="#" class="modal__link">ОБРАТНАЯ СВЯЗЬ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal__social">
+                        <ul class="modal__social-list">
+                            <li class="modal__social-item">
+                                <a href="#" class="modal__social-link">
+                                    <img class="modal__social-icon" src="./images/footer-social-media/vk.svg"
+                                        alt="vk icon">
+                                </a>
+                            </li>
+                            <li class="modal__social-item">
+                                <a href="#" class="modal__social-link">
+                                    <img class="modal__social-icon" src="./images/footer-social-media/fb.svg"
+                                        alt="fb icon">
+                                </a>
+                            </li>
+                            <li class="modal__social-item">
+                                <a href="#" class="modal__social-link">
+                                    <img class="modal__social-icon" src="./images/footer-social-media/inst.svg"
+                                        alt="inst icon">
+                                </a>
+                            </li>
+                            <li class="modal__social-item">
+                                <a href="#" class="modal__social-link">
+                                    <img class="modal__social-icon" src="./images/footer-social-media/yt.svg"
+                                        alt="yt icon">
+                                </a>
+                            </li>
+                            <li class="modal__social-item">
+                                <a href="#" class="modal__social-link">
+                                    <img class="modal__social-icon" src="./images/footer-social-media/tg.svg"
+                                        alt="tg icon">
+                                </a>
+                            </li>
+                            <li class="modal__social-item">
+                                <a href="#" class="modal__social-link">
+                                    <img class="modal__social-icon" src="./images/footer-social-media/tt.svg"
+                                        alt="tt icon">
+                                </a>
+                            </li>
+                            <li class="modal__social-item">
+                                <a href="#" class="modal__social-link">
+                                    <img class="modal__social-icon" src="./images/footer-social-media/tw.svg"
+                                        alt="tw icon">
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="modal__column">
-                        <ul class="modal__list">
-                            <li><a href="#" class="modal__link">Футбол</a></li>
-                            <li><a href="#" class="modal__link">Хоккей</a></li>
-                            <li><a href="#" class="modal__link">Биатлон</a></li>
-                            <li><a href="#" class="modal__link">Теннис</a></li>
-                            <li><a href="#" class="modal__link">Гандбол</a></li>
-                            <li><a href="#" class="modal__link">Баскетбол</a></li>
-                            <li><a href="#" class="modal__link">Бокс</a></li>
-                            <li><a href="#" class="modal__link">Легкая атлетика</a></li>
-                            <li><a href="#" class="modal__link">Другое</a></li>
-                        </ul>
-                    </div>
-                    <div class="modal__column">
-                        <ul class="modal__list">
-                            <li><a href="#" class="modal__link">О ПРОЕКТЕ</a></li>
-                            <li><a href="#" class="modal__link">ОБРАТНАЯ СВЯЗЬ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="modal__social">
-                    <ul class="modal__social-list">
-                        <li class="modal__social-item">
-                            <a href="#" class="modal__social-link">
-                                <img class="modal__social-icon" src="./images/footer-social-media/vk.svg" alt="vk icon">
-                            </a>
-                        </li>
-                        <li class="modal__social-item">
-                            <a href="#" class="modal__social-link">
-                                <img class="modal__social-icon" src="./images/footer-social-media/fb.svg" alt="fb icon">
-                            </a>
-                        </li>
-                        <li class="modal__social-item">
-                            <a href="#" class="modal__social-link">
-                                <img class="modal__social-icon" src="./images/footer-social-media/inst.svg" alt="inst icon">
-                            </a>
-                        </li>
-                        <li class="modal__social-item">
-                            <a href="#" class="modal__social-link">
-                                <img class="modal__social-icon" src="./images/footer-social-media/yt.svg" alt="yt icon">
-                            </a>
-                        </li>
-                        <li class="modal__social-item">
-                            <a href="#" class="modal__social-link">
-                                <img class="modal__social-icon" src="./images/footer-social-media/tg.svg" alt="tg icon">
-                            </a>
-                        </li>
-                        <li class="modal__social-item">
-                            <a href="#" class="modal__social-link">
-                                <img class="modal__social-icon" src="./images/footer-social-media/tt.svg" alt="tt icon">
-                            </a>
-                        </li>
-                        <li class="modal__social-item">
-                            <a href="#" class="modal__social-link">
-                                <img class="modal__social-icon" src="./images/footer-social-media/tw.svg" alt="tw icon">
-                            </a>
-                        </li>
-                    </ul>
                 </div>
                 <div class="modal__footer">
                     <div class="modal__ad">
-                        <p class="modal__ad-title">Реклама:</p>
+                        <p class="modal__ad-title">Размещение рекламы:</p>
                         <a href="mailto:ads@sporthub.news" class="modal__ad-link">ads@sporthub.news</a>
                     </div>
                     <div class="modal__subscription">
-                        <h4 class="modal__subscription-title">Подписка</h4>
                         <form action="" class="modal__subscription-form">
-                            <input type="email" id="modalEmail" name="email" placeholder="Введите ваш email" required>
+                            <div class="modal__form-group">
+                                <label class="modal__subscription-label" for="modalEmail">Подписка</label>
+                                <input type="email" id="modalEmail" name="email" placeholder="Введите ваш email"
+                                    required>
+                            </div>
                             <button type="submit" class="modal__subscription-button">подписаться</button>
                         </form>
                     </div>
