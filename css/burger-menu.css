@@ -45,6 +45,16 @@
     transform: translateY(0px) rotate(-45deg);
 }
 
+.burger-menu.active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.burger-menu.active .burger-menu__line {
+    background-color: #ffcccc;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
 .menu-overlay {
     display: none;
     position: fixed;
